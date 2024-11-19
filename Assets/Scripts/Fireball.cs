@@ -2,23 +2,20 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
+    private const float StartSpeed = 5f;
+
+    [SerializeField] private ParticleSystem[] _particleSystems;
+    [SerializeField] private ParticleSystemForceField _blast;
+
     private float _speed;
     private Warrior _target;
-    private ParticleSystem[] _particleSystems;
-    private ParticleSystemForceField _blast;
 
     private void Start()
     {
-        _particleSystems = gameObject.GetComponentsInChildren<ParticleSystem>();
-        _blast = gameObject.GetComponentInChildren<ParticleSystemForceField>(true);
-
-        if (_blast == null)
-        {
-            Debug.Log("_blast is not active!");
-        }
+        _speed = StartSpeed;
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         transform.LookAt(_target.transform, Vector3.up);
         transform.position = Vector3.MoveTowards(
@@ -38,17 +35,9 @@ public class Fireball : MonoBehaviour
         _target = warrior;
     }
 
-    public void SetSpeed(float value)
-    {
-        _speed = value;
-    }
-
     private void ActivateBlast()
     {
-        if (_blast != null)
-        {
-            _blast.gameObject.SetActive(true);
-        }
+        _blast.gameObject.SetActive(true);
 
         foreach (ParticleSystem system in _particleSystems)
         {

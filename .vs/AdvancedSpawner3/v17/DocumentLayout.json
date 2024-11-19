@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Unity Projects\\AdvancedSpawner3\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1770138-E395-9AB1-E196-60C611EF7637}|Assembly-CSharp.csproj|c:\\unity projects\\advancedspawner3\\assets\\scripts\\warrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1770138-E395-9AB1-E196-60C611EF7637}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\warrior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1770138-E395-9AB1-E196-60C611EF7637}|Assembly-CSharp.csproj|c:\\unity projects\\advancedspawner3\\assets\\scripts\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1770138-E395-9AB1-E196-60C611EF7637}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1770138-E395-9AB1-E196-60C611EF7637}|Assembly-CSharp.csproj|c:\\unity projects\\advancedspawner3\\assets\\scripts\\spawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1770138-E395-9AB1-E196-60C611EF7637}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawnpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1770138-E395-9AB1-E196-60C611EF7637}|Assembly-CSharp.csproj|c:\\unity projects\\advancedspawner3\\assets\\scripts\\spawnpointsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1770138-E395-9AB1-E196-60C611EF7637}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawnpointsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SpawnPoint.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\AdvancedSpawner3\\Assets\\Scripts\\SpawnPoint.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnPoint.cs",
+              "ToolTip": "C:\\Unity Projects\\AdvancedSpawner3\\Assets\\Scripts\\SpawnPoint.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SpawnPoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T18:37:13.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Fireball.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\AdvancedSpawner3\\Assets\\Scripts\\Fireball.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Fireball.cs",
+              "ToolTip": "C:\\Unity Projects\\AdvancedSpawner3\\Assets\\Scripts\\Fireball.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Fireball.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T18:31:47.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SpawnPointsManager.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\AdvancedSpawner3\\Assets\\Scripts\\SpawnPointsManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnPointsManager.cs",
+              "ToolTip": "C:\\Unity Projects\\AdvancedSpawner3\\Assets\\Scripts\\SpawnPointsManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SpawnPointsManager.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T18:30:04.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Warrior.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\AdvancedSpawner3\\Assets\\Scripts\\Warrior.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Warrior.cs",
+              "ToolTip": "C:\\Unity Projects\\AdvancedSpawner3\\Assets\\Scripts\\Warrior.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Warrior.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T18:23:30.943Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

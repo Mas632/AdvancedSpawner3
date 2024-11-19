@@ -8,8 +8,6 @@ public class SpawnPointsManager : MonoBehaviour
 
     private Coroutine _spawningProcess;
 
-    private SpawnPoint GetRandomSpawnPoint => _spawnPoints[Random.Range(0, _spawnPoints.Length)];
-
     private void OnEnable()
     {
         _spawningProcess = StartCoroutine(Spawning());
@@ -20,6 +18,11 @@ public class SpawnPointsManager : MonoBehaviour
         StopCoroutine(_spawningProcess);
     }
 
+    private SpawnPoint GetRandomSpawnPoint()
+    {
+        return _spawnPoints[Random.Range(0, _spawnPoints.Length)];
+    }
+
     private IEnumerator Spawning()
     {
         var delay = new WaitForSecondsRealtime(timeBetweenSpawns);
@@ -27,7 +30,7 @@ public class SpawnPointsManager : MonoBehaviour
         while (true)
         {
             yield return delay;
-            GetRandomSpawnPoint.Spawn();
+            GetRandomSpawnPoint().Spawn();
         }
     }
 }

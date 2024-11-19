@@ -2,25 +2,30 @@ using UnityEngine;
 
 public class Warrior : MonoBehaviour
 {
-    private const float DistanceChecker = 0.2f;
-    private const float DegreesInOneRadian = 180f;
+    private const float SqrDistanceChecker = 0.2f * 0.2f;
 
     [SerializeField] private Waypoint[] _waypoints;
     [SerializeField] private float _speed;
     [SerializeField] private float _rotationSpeed;
 
-    private int _currentWayPointIndex;
+    private Vector3[] _waypointsPositions;
+    private int _currentWaypointIndex;
 
-    private Vector3 CurrentWaypoint => _waypoints[_currentWayPointIndex].gameObject.transform.position;
-    private float DistanceToCurrentWaypoint => Mathf.Sqrt(Mathf.Pow(transform.position.x - CurrentWaypoint.x, 2) + Mathf.Pow(transform.position.z - CurrentWaypoint.z, 2));
-    private bool IsWaypointReached => DistanceToCurrentWaypoint < DistanceChecker;
+    private Vector3 CurrentWaypointPosition => _waypointsPositions[_currentWaypointIndex];
+    private bool IsWaypointReached => (transform.position- CurrentWaypointPosition).sqrMagnitude < SqrDistanceChecker;
 
     private void Start()
     {
-        _currentWayPointIndex = 0;
+        _currentWaypointIndex = 0;
+        _waypointsPositions = new Vector3[_waypoints.Length];
+
+        for (int i = 0; i < _waypoints.Length; i++)
+        {
+            _waypointsPositions[i] = _waypoints[i].transform.position;
+        }
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         Move();
 
@@ -32,12 +37,12 @@ public class Warrior : MonoBehaviour
 
     private void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, CurrentWaypoint, _speed * Time.deltaTime);
-        transform.LookAt(CurrentWaypoint);
+        transform.position = Vector3.MoveTowards(transform.position, CurrentWaypointPosition, _speed * Time.deltaTime);
+        transform.LookAt(CurrentWaypointPosition);
     }
 
     private void ToggleToNextWaypoint()
     {
-        _currentWayPointIndex = (_currentWayPointIndex + 1) % _waypoints.Length;
+        _currentWaypointIndex = (++_currentWaypointIndex) % _waypoints.Length;
     }
 }
